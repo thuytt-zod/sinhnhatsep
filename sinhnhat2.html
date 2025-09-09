@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Sếp Khánh & Sếp Linh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #0c0a1b;
+            background-image: linear-gradient(145deg, #1C3F94 0%, #0c0a1b 30%, #0c0a1b 70%, #9212a6 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Animation cho các phần tử --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* --- Hiệu ứng viền phát sáng --- */
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6; }
+            50% { box-shadow: 0 0 15px #60a5fa, 0 0 25px #60a5fa; }
+            100% { box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6; }
+        }
+        .glow-blue {
+            animation: pulse-blue 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse-purple {
+            0% { box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7; }
+            50% { box-shadow: 0 0 15px #c084fc, 0 0 25px #c084fc; }
+            100% { box-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7; }
+        }
+        .glow-purple {
+            animation: pulse-purple 3s infinite ease-in-out;
+        }
+        
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 8px #f59e0b, 0 0 16px #f59e0b; }
+            50% { box-shadow: 0 0 24px #fbbf24, 0 0 40px #fbbf24; }
+            100% { box-shadow: 0 0 8px #f59e0b, 0 0 16px #f59e0b; }
+        }
+
+        @keyframes pulse-white {
+            0% { box-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; }
+            50% { box-shadow: 0 0 24px #f8fafc, 0 0 40px #f8fafc; }
+            100% { box-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; }
+        }
+
+        .glow-white {
+            animation: pulse-white 2.5s infinite ease-in-out;
+        }
+
+        .wish-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .wish-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .leader-final-card {
+            background: rgba(30, 27, 75, 0.5);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            animation: pulse-gold 4s infinite ease-in-out;
+        }
+
+        /* --- Hiệu ứng pháo hoa/confetti --- */
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 16px;
+            background: #f00;
+            top: -20px;
+            opacity: 0.8;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Confetti Background -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none" id="confetti-container"></div>
+
+    <div class="relative z-10 container mx-auto px-4 py-12 md:py-20">
+        <!-- Header -->
+        <header class="text-center mb-16 fade-in">
+            <img src="https://zodiac.com.vn/wp-content/uploads/2021/02/Group-6780.png" alt="Zodiac Logo" class="w-32 mx-auto mb-6">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight uppercase" style="background: linear-gradient(90deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Happy Birthday
+            </h1>
+            <p class="text-2xl md:text-4xl font-bold mt-2 text-white">Mr. Vũ Quốc Khánh & Mr. Vũ Quang Linh</p>
+        </header>
+
+        <!-- Phần 1: Lời chúc Mr. Khánh -->
+        <section class="mb-20">
+            <div class="text-center mb-12 fade-in" style="animation-delay: 0.2s;">
+                 <img src="https://zodiac.com.vn/wp-content/uploads/2021/04/Vu-Quoc-Khanh-1.png" alt="Mr. Vũ Quốc Khánh" class="w-40 h-40 rounded-2xl mx-auto mb-4 border-4 border-[#1C3F94] shadow-lg object-cover glow-white">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-300">Gửi Mr. Vũ Quốc Khánh</h2>
+                <p class="text-lg text-gray-300 mt-2">Những lời chúc tốt đẹp nhất từ những người đồng hành và đội ngũ CBNV.</p>
+            </div>
+            
+            <!-- Lời chúc từ nhân viên -->
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lời chúc 1 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật Anh Khánh – người lãnh đạo tài ba, tầm nhìn sáng suốt. Kính chúc Anh tuổi mới tràn đầy năng lượng để tiếp tục đưa công ty Zodiac ngày càng lớn mạnh."</p>
+                    <p class="font-bold text-right text-blue-300">- VŨ HOÀNG TÂM -</p>
+                </div>
+                <!-- Lời chúc 2 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú tuổi mới sức khỏe, bình an và mãi giữ nụ cười trên môi 🥳🥳🥳"</p>
+                    <p class="font-bold text-right text-blue-300">- Mi -</p>
+                </div>
+                <!-- Lời chúc 3 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật Chủ tịch! Kính chúc Chủ tịch và gia đình luôn bình an, thịnh vượng và nhiều niềm vui trong cuộc sống."</p>
+                    <p class="font-bold text-right text-blue-300">- Bùi Doãn Đạt -</p>
+                </div>
+                 <!-- Lời chúc 4 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu xin chúc mừng sinh nhật chú, một trong những người thầy của cháu tại Zodiac. Cháu xin cảm ơn chú vì đã tận tình hướng dẫn, coaching, chia sẻ rất nhiều kinh nghiệm cho cháu trong thời gian cháu làm ở đây. Buổi nào cũng phải 1-2 tiếng ạ :3 Tuổi mới cháu chúc chú có thật nhiều sức khỏe, niềm vui và thành công để tiếp tục dẫn dắt con tàu Zod đi xa hơn nữa."</p>
+                    <p class="font-bold text-right text-blue-300">- Hoàng Anh -</p>
+                </div>
+                 <!-- Lời chúc 5 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân dịp sinh nhật Chú ạ. Cháu xin chúc Chú thật nhiều sức khoẻ, hạnh phúc, an vui, và tiếp tục lan tỏa ngọn lửa nhiệt huyết cho chúng cháu ạ."</p>
+                    <p class="font-bold text-right text-blue-300">- Lưu Xuân Lưu -</p>
+                </div>
+                 <!-- Lời chúc 6 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc Chú sinh nhật vui vẻ , chúc chú ngày càng phong độ , công việc thuận lợi , sức khoẻ dồi dào Cảm ơn chú đã luôn là người truyền động lực, năng lượng tích cực cho chúng cháu, chúc chú luôn luôn tràn đầy năng lượng, vui vẻ, và hạnh phúc ạ !"</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Văn Hùng -</p>
+                </div>
+                 <!-- Lời chúc 7 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân ngày đặc biệt, kính chúc chú sức khỏe dồi dào và tinh thần lạc quan. Chúc chú luôn thành công, hạnh phúc bên gia đình và tập thể công ty"</p>
+                    <p class="font-bold text-right text-blue-300">- Đặng Minh Đức -</p>
+                </div>
+                <!-- Lời chúc 8 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Biết ơn cuộc đời này em được gặp một người sếp như anh! Em muốn gửi những lời chúc ngọt ngào và chân thành nhất tới anh trong 365 ngày của năm chứ không chỉ riêng sinh nhật anh. Chúc anh sức khỏe, bình an và hạnh phúc!"</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Bảo Hường -</p>
+                </div>
+                <!-- Lời chúc 9 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú sinh nhật vui vẻ, mạnh khoẻ và luôn thành công trong cuộc sống"</p>
+                    <p class="font-bold text-right text-blue-300">- Trần Thị Thảo -</p>
+                </div>
+                <!-- Lời chúc 10 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh sinh nhật vui vẻ, mạnh khỏe, nhiều may mắn và tiếp tục là người truyền cảm hứng cho chúng em."</p>
+                    <p class="font-bold text-right text-blue-300">- Ngô văn tùng -</p>
+                </div>
+                <!-- Lời chúc 11 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú Khánh luôn mạnh khỏe, luôn đầy ắp niềm vui và đạt được thành công lớn cho mọi dự định và kế hoạch sắp tới ạ."</p>
+                    <p class="font-bold text-right text-blue-300">- Mai Xuân An -</p>
+                </div>
+                <!-- Lời chúc 12 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Kính chúc chú luôn dồi dào sức khỏe, công việc thuận lợi, gia đình hạnh phúc và nhiều niềm vui bên những người thân yêu. Chúc chú một tuổi mới tràn đầy may mắn và thành công !!!"</p>
+                    <p class="font-bold text-right text-blue-300">- Dương Hoàng Giang -</p>
+                </div>
+                <!-- Lời chúc 13 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Kính chúc Chủ tịch tuổi 65 thật nhiều sức khỏe, an khang và hạnh phúc. Mong Chủ tịch luôn minh triết, vững vàng, tiếp tục hành trình truyền cảm hứng và dẫn dắt tập thể nhân viên trên chặng đường phía trước ạ!"</p>
+                    <p class="font-bold text-right text-blue-300">- Phương Ly -</p>
+                </div>
+                <!-- Lời chúc 14 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Kính chúc Chủ tịch Khánh tuổi mới nhiều sức khỏe, niềm vui và phúc lộc viên mãn."</p>
+                    <p class="font-bold text-right text-blue-300">- Lê Thị Thúy -</p>
+                </div>
+                <!-- Lời chúc 15 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú sinh nhật thật nhiều sức khoẻ để tiếp tục đưa thương hiệu công ty đứng vững trên thị trường ạ."</p>
+                    <p class="font-bold text-right text-blue-300">- Hà Thương -</p>
+                </div>
+                <!-- Lời chúc 16 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc chú sinh nhật thật vui vẻ, mạnh khỏe và luôn hạnh phúc bên gia đình!"</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Hương -</p>
+                </div>
+                <!-- Lời chúc 17 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân dịp sinh nhật chú, cháu xin kính chúc chú thật nhiều sức khỏe, luôn tràn đầy năng lượng và nhiệt huyết để tiếp tục dẫn dắt con thuyền công ty vững vàng, chinh phục nhiều mục tiêu lớn. Chúc Chủ tịch thêm một tuổi mới ngập tràn niềm vui, hạnh phúc bên gia đình, người thân, bạn bè và luôn là nguồn cảm hứng, niềm tin để chúng cháu noi theo."</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Thị Mỹ Linh -</p>
+                </div>
+                <!-- Lời chúc 18 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật tuổi 65 của Chủ tịch! Kính chúc Chú thật nhiều sức khỏe, luôn vui vẻ, an nhiên bên gia đình và người thân.65 năm là chặng đường đẹp của trí tuệ, trải nghiệm và tình cảm – mong rằng chặng đường tiếp theo sẽ càng thêm ấm áp, hạnh phúc và viên mãn. Love <3"</p>
+                    <p class="font-bold text-right text-blue-300">- Người yêu Triển Chiêu -</p>
+                </div>
+                <!-- Lời chúc 19 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chú luôn là tấm gương sáng của tầm nhìn sắc sảo cho tương lai, sự tử tế trong kinh doanh và tình người đến tất cả nhân viên. Chúc mừng sinh nhật chú Khánh- vị chủ tịch tuyệt vời, đáng kính nhất - không chỉ một ngày sinh nhật vui vẻ , mà là mỗi ngày đều tràn ngập niềm vui, sức khỏe và thành tựu."</p>
+                    <p class="font-bold text-right text-blue-300">- TRẦN MINH TÂM -</p>
+                </div>
+                <!-- Lời chúc 20 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân dịp sinh nhật Sếp. Em chúc Sếp luôn có thật nhiều sức khoẻ, vui vẻ và thành công."</p>
+                    <p class="font-bold text-right text-blue-300">- Đinh Thuý Quỳnh -</p>
+                </div>
+                <!-- Lời chúc 21 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú tuổi mới ngày càng thăng hoa, sự nghiệp vững vàng, đạt được nhiều dấu mốc lớn và tiếp tục truyền cảm hứng cho Zodiacers ạ."</p>
+                    <p class="font-bold text-right text-blue-300">- Tú Anh -</p>
+                </div>
+                <!-- Lời chúc 22 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu kính chúc Chú một sinh nhật thật nhiều niềm vui, sức khỏe dồi dào và luôn tràn đầy năng lượng để tiếp tục chèo lái Zodiac vươn xa hơn nữa. Cháu rất tự hào và biết ơn khi được làm việc cùng Chú – một người lãnh đạo bản lĩnh, tâm huyết và đầy nhiệt tình. Kính chúc Chú tuổi mới thật nhiều may mắn, hạnh phúc viên mãn bên gia đình và những người thân yêu."</p>
+                    <p class="font-bold text-right text-blue-300">- Phạm Mai Chi -</p>
+                </div>
+                <!-- Lời chúc 23 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc mừng sinh nhật chú ạ! Cháu chúc chú vẫn luôn mạnh khoẻ, vẫn luôn tràn đầy năng lượng và nhiệt huyết. Đối với tất cả các thành viên của HealthSK/Goodhealth, chú luôn là một chủ tịch đáng kính ạ!"</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Thị Thảo -</p>
+                </div>
+                <!-- Lời chúc 24 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật chú Khánh. Cháu chúc chú tuổi mới dồi dào sức khỏe , có thật nhiều niềm vui và luôn tràn đầy năng lượng ạ"</p>
+                    <p class="font-bold text-right text-blue-300">- Phan Thị Hà Giang -</p>
+                </div>
+                 <!-- Lời chúc 25 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân dịp sinh nhật, cháu xin gửi tới chú những lời chúc tốt đẹp nhất. Chúc chú luôn dồi dào sức khoẻ, tinh thần vui vẻ và gặt hái nhiều thành công trong công việc cũng như trong cuộc sống. Mong rằng bước sang tuổi mới chú sẽ đạt được những mục tiêu đã đề ra và luôn gặp nhiều may mắn, hạnh phúc bên gia đình."</p>
+                    <p class="font-bold text-right text-blue-300">- Mạnh Hà HealthSK -</p>
+                </div>
+                <!-- Lời chúc 26 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật Chú Khánh! Ở tuổi 65, Chú vẫn giữ được sự nhiệt huyết, nguồn năng lượng và tinh thần tích cực là điều khiến cháu luôn ngưỡng mộ. Cháu rất trân trọng những định hướng, sự quan tâm và những chia sẻ chân tình mà Chú dành cho anh chị em trong công ty. Cháu chúc Chú thật nhiều sức khoẻ để tận hưởng trọn vẹn niềm vui mỗi ngày và tiếp tục lan tỏa nguồn cảm hứng sống tích cực đến mọi người. Mong rằng năm nay sẽ là một năm thật nhiều hạnh phúc, bình an và nhiều thành tựu đáng nhớ đối với chú. Cháu chúc chú sinh nhật vui vẻ ạ!"</p>
+                    <p class="font-bold text-right text-blue-300">- Bông Hoa HealthSK -</p>
+                </div>
+                <!-- Lời chúc 27 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú luôn dồi dào sức khoẻ, luôn giữ vững phong độ để chèo lái con thuyền Zodiac ạ."</p>
+                    <p class="font-bold text-right text-blue-300">- Ngô Nhật Minh -</p>
+                </div>
+                <!-- Lời chúc 28 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu xin kính chúc chú : có một sức khoẻ thật dồi dào, có một nguồn năng lượng thật lớn lao, có một trái tim tràn đầy nhiệt huyết trong công việc và trong cuộc sống. Cháu xin chúc chú vạn sự như ý, mọi điều bình an."</p>
+                    <p class="font-bold text-right text-blue-300">- Vũ Thị Cẩm Vân -</p>
+                </div>
+                <!-- Lời chúc 29 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật sếp! Chúc sếp luôn mạnh khỏe, vui vẻ và tràn đầy năng lượng để tiếp tục truyền cảm hứng cho cả công ty!"</p>
+                    <p class="font-bold text-right text-blue-300">- Kiều Quốc Hưng -</p>
+                </div>
+                <!-- Lời chúc 30 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh Khánh có 1 sinh nhật hạnh phúc với gia đình, nhiều sức khỏe để chèo lái con thuyền Zodiac. "phong độ không đổi, thành công gấp đôi, tiền nong gấp bội""</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Thị Hương Giang -</p>
+                </div>
+                <!-- Lời chúc 31 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Kính chúc Chủ tịch một sinh nhật thật nhiều niềm vui và ý nghĩa. Chúc Chủ tịch dồi dào sức khỏe, luôn minh mẫn, sáng suốt để tiếp tục dẫn dắt công ty ngày càng phát triển vững mạnh và gặt hái thêm nhiều thành công rực rỡ."</p>
+                    <p class="font-bold text-right text-blue-300">- Võ Quốc Quân -</p>
+                </div>
+                <!-- Lời chúc 32 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Khi vào công ty, khi lần đầu được gặp Sếp Khánh em thấy mình được truyền động lực mạnh mẽ về các giá trị sống của công ty mình đặc biệt từ người dẫn đầu. Nhân dịp sinh nhật em chúc sếp luôn tràn trề năng lượng, sức khỏe, luôn thông thái mang đến nhiều giá trí tốt đẹp lan rộng hơn nữa ạ"</p>
+                    <p class="font-bold text-right text-blue-300">- PHAN ĐÌNH NGỌC HÂN -</p>
+                </div>
+                 <!-- Lời chúc 33 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Khánh tuổi mới nhiều sức khỏe, nhiều niềm vui"</p>
+                    <p class="font-bold text-right text-blue-300">- Trần Mỹ Chân -</p>
+                </div>
+                <!-- Lời chúc 34 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh Khánh tuổi mới nhiều sức khỏe; năng lượng luôn tràn đầy truyền lại cho đàn em."</p>
+                    <p class="font-bold text-right text-blue-300">- Lê Tất Tiến -</p>
+                </div>
+                <!-- Lời chúc 35 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc bác thêm 1 tuổi mới luôn mạnh khỏe và tràn ngập niềm vui"</p>
+                    <p class="font-bold text-right text-blue-300">- Hoàng Tuấn Minh -</p>
+                </div>
+                 <!-- Lời chúc 36 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật Sếp Khánh! Chúc Sếp tuổi mới vẫn giữ vững phong độ là người sếp tuyệt vời nhất, người anh cả đáng kính nhưng đôi khi cũng là 'người bạn' hài hước nhất của team. Cảm ơn sếp vì tất cả. Kính chúc sếp một sinh nhật thật ý nghĩa!"</p>
+                    <p class="font-bold text-right text-blue-300">- Nguyễn Thúy Hà -</p>
+                </div>
+                <!-- Lời chúc 37 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú sinh nhật tuổi 60++ vui vẻ và ấm áp – giai đoạn "trẻ lâu nhưng không cần cố" :) , chúc chú ngày càng khỏe mạnh, phong độ như thời trai trẻ, thật nhiều tiếng cười và hạnh phúc bên gia đình!"</p>
+                    <p class="font-bold text-right text-blue-300">- Cháu Hoa -</p>
+                </div>
+                <!-- Lời chúc 38 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu xin gửi lời chúc mừng sinh nhật đến chú Khánh ạ. Kính chúc chú luôn dồi dào sức khỏe, luôn giữ vững tinh thần nhiệt huyết và mãi là người truyền cảm hứng, dìu dắt tập thể Zodiac đi lên vững mạnh hơn ạ. "</p>
+                    <p class="font-bold text-right text-blue-300">- Trần Khánh Chi -</p>
+                </div>
+                <!-- Lời chúc 39 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Cháu chúc chú Khánh sinh nhật vui vẻ: luôn tràn đầy sinh lực và tràn đầy trí tuệ ạ"</p>
+                    <p class="font-bold text-right text-blue-300">- Hoàng Trung Đức -</p>
+                </div>
+                <!-- Lời chúc 40 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-blue" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Khánh luôn luôn mạnh khỏe, tươi trẻ, mãi là nguồn cảm hứng khơi gợi tinh thần cho chúng cháu học tập, noi theo."</p>
+                    <p class="font-bold text-right text-blue-300">- Mai Việt Khoa -</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần 2: Lời chúc Mr. Linh -->
+        <section class="mb-20">
+            <div class="text-center mb-12 fade-in" style="animation-delay: 0.2s;">
+                <img src="https://i.postimg.cc/BntLpWcg/HAN05331.jpg" alt="Mr. Vũ Quang Linh" class="w-40 h-40 rounded-2xl mx-auto mb-4 border-4 border-[#9212a6] shadow-lg object-cover glow-white">
+                <h2 class="text-3xl md:text-4xl font-bold text-purple-300">Gửi Mr. Vũ Quang Linh</h2>
+                <p class="text-lg text-gray-300 mt-2">Những tình cảm và lời chúc ý nghĩa từ mọi người.</p>
+            </div>
+
+            <!-- Lời chúc từ nhân viên -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lời chúc 1 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc Mr.Linh thêm một tuổi mới với nhiều thành công mới, đưa Cty Zodiac Clarity chúng ta ngày càng vững mạnh và phát triển bền vững."</p>
+                    <p class="font-bold text-right text-purple-300">- Vũ Hoàng Tâm -</p>
+                </div>
+                 <!-- Lời chúc 2 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"m chúc sếp Linh tuổi mới luôn rạng rỡ, tràn đầy năng lượng, sức khỏe dồi dào và gặt hái thật nhiều thành công trong mọi lĩnh vực. Chúc sếp lúc nào cũng tươi thật tươi và thật hạnh phúc ạ!"</p>
+                    <p class="font-bold text-right text-purple-300">- Mi -</p>
+                </div>
+                <!-- Lời chúc 3 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh Linh tuổi mới luôn thành công, luôn là người thuyền trưởng đầy mạnh mẽ và tự tin chèo lái con tàu Zodiac Clarity tiến lên phía trước. Anh là người truyền cảm hứng, đem lại nguồn năng lượng tích cực đến cho toàn thể CBNV. Happy Birthday Sếp"</p>
+                    <p class="font-bold text-right text-purple-300">- Nguyễn Ngọc Quỳnh Chi -</p>
+                </div>
+                 <!-- Lời chúc 4 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Nhân dịp sinh nhật, kính chúc Tổng giám đốc luôn mạnh khỏe, giữ vững bản lĩnh lãnh đạo và đạt nhiều thành công mới."</p>
+                    <p class="font-bold text-right text-purple-300">- Bùi Doãn Đạt -</p>
+                </div>
+                 <!-- Lời chúc 5 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật Sếp (Câu nói cửa miệng: Mày cứ làm đi! Anh okay! Anh không có ý kiến gì cả :v) Chúc sếp tuổi mới luôn vui vẻ, nhiệt huyết và vững tay lái con tàu Clarity đi xa hơn!!!"</p>
+                    <p class="font-bold text-right text-purple-300">- Hoàng Anh -</p>
+                </div>
+                 <!-- Lời chúc 6 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Linh sinh lý dồi dào, tiền vào ào ào! May mắn, thành công, đại thành công!"</p>
+                    <p class="font-bold text-right text-purple-300">- Nguyễn Bảo Hường -</p>
+                </div>
+                 <!-- Lời chúc 7 -->
+                 <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc a tuổi mới vui vẻ, luôn là đầu tàu vững chãi cho Zodiac Clarity"</p>
+                    <p class="font-bold text-right text-purple-300">- Trần Thị Thảo -</p>
+                </div>
+                <!-- Lời chúc 8 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"Em chúc anh Linh giàu sức khỏe, giàu niềm vui tiếng cười và luôn giàu ạ."</p>
+                    <p class="font-bold text-right text-purple-300">- Mai Xuân An -</p>
+                </div>
+                <!-- Lời chúc 9 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Sinh nhật vui vẻ nhé anh! Chúc anh luôn giữ vững tinh thần lạc quan, gặt hái nhiều thành công và niềm vui trong cuộc sống."</p>
+                    <p class="font-bold text-right text-purple-300">- Em Hương -</p>
+                </div>
+                <!-- Lời chúc 10 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh luôn nhiều sức khỏe để lèo lái con thuyền Clarity thành công hơn nữa trong nhiều năm tới!"</p>
+                    <p class="font-bold text-right text-purple-300">- Phước -</p>
+                </div>
+                <!-- Lời chúc 11 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Em chúc anh Linh sinh nhật thật nhiều tiếng cười, luôn khỏe mạnh và tràn đầy năng lượng để vừa “cháy” trong công việc, vừa hạnh phúc bên gia đình. Chúc anh tuổi mới gặp thật nhiều may mắn, gặt hái thêm nhiều thành công cùng Clarity – và quan trọng là lúc nào cũng giữ được tinh thần vui vẻ, nhiệt huyết mà anh vẫn truyền cho mọi người."</p>
+                    <p class="font-bold text-right text-purple-300">- Phạm Mai Chi -</p>
+                </div>
+                <!-- Lời chúc 12 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh Linh tuổi mới: sức khỏe ‘full pin’, công việc ‘auto win’, hợp đồng ‘chốt liền’, deadline ‘xóa liền’, còn nhân viên thì… luôn ngoan hiền ạ !!!!!"</p>
+                    <p class="font-bold text-right text-purple-300">- Tú Anh -</p>
+                </div>
+                <!-- Lời chúc 13 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật anh Linh. Chúc anh luôn vui vẻ, giữ mãi sự hài hước đáng yêu :))) "</p>
+                    <p class="font-bold text-right text-purple-300">- Phan Thị Hà Giang -</p>
+                </div>
+                <!-- Lời chúc 14 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Em chúc anh Linh sinh nhật vui vẻ thật nhiều sức khỏe hẹ hẹ hẹ :3"</p>
+                    <p class="font-bold text-right text-purple-300">- Hà Thương -</p>
+                </div>
+                <!-- Lời chúc 15 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Sếp Linh: Chúc mừng sinh nhật anh Linh!"</p>
+                    <p class="font-bold text-right text-purple-300">- Dương Thị Thảo -</p>
+                </div>
+                <!-- Lời chúc 16 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.2s;">
+                    <p class="text-gray-300 mb-4 italic">"E chúc sếp Linh tuổi mới thêm nhiều niềm vui, gia đình hạnh phúc, công việc suôn sẻ và luôn giữ được tinh thần lạc quan truyền cảm hứng cho cả team."</p>
+                    <p class="font-bold text-right text-purple-300">- Ngô Nhật Minh -</p>
+                </div>
+                <!-- Lời chúc 17 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">"Happy Birthday sếp! Chúc sếp luôn trẻ trung, năng động :D !"</p>
+                    <p class="font-bold text-right text-purple-300">- Kiều Quốc Hưng -</p>
+                </div>
+                <!-- Lời chúc 18 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc Sếp Linh luôn vui, luôn hạnh phúc, luôn giàu có, luôn thành công, luôn luôn phong độ ạ"</p>
+                    <p class="font-bold text-right text-purple-300">- PHAN ĐÌNH NGỌC HÂN -</p>
+                </div>
+                <!-- Lời chúc 19 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc Anh mỗi ngày đi làm là một ngày vui, khách hàng quý như bạn, nhân viên ngoan như… con =)))), và đặc biệt là tuổi mới, sếp vừa thành công hơn, vừa giàu có hơn, vừa dễ thương hơn để tụi em còn có động lực cống hiến dài dài!\" em chờ sếp vào dắc đi quẩy nữa =))))))))))))"</p>
+                    <p class="font-bold text-right text-purple-300">- Nguyễn Thị Hương Giang -</p>
+                </div>
+                <!-- Lời chúc 20 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Linh tuổi mới nhiều tràn đầy năng lượng, vui vẻ và nhiều sức khỏe"</p>
+                    <p class="font-bold text-right text-purple-300">- Trần Mỹ Chân -</p>
+                </div>
+                <!-- Lời chúc 21 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.9s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Linh sinh nhật vui vẽ, mạnh khỏe, thành công, tiền vào như nước- việc ít mà lương cao. Em xin hứa làm việc chăm chỉ, không than, không chậm deadline ( trừ khi sếp cho phép). Chúc sếp mãi là ‘đầu tàu’ dẫn dắt chúng em đi từ thành công này đến thành công khác!” 🎂🥂."</p>
+                    <p class="font-bold text-right text-purple-300">- Võ Quốc Quân -</p>
+                </div>
+                <!-- Lời chúc 22 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.0s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp đón tuổi mới nhiều sức khỏe; năng lượng và nhiệt huyết khởi nghiệp luôn tràn đầy lan tỏa đến anh em. Chúc sếp luôn sáng suốt lựa chọn hướng đi cho Zodiac Clarity."</p>
+                    <p class="font-bold text-right text-purple-300">- Lê Tất Tiến -</p>
+                </div>
+                <!-- Lời chúc 23 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 1.1s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh thêm 1 tuổi mới luôn mạnh khỏe và tràn ngập niềm vui"</p>
+                    <p class="font-bold text-right text-purple-300">- Hoàng Tuấn Minh -</p>
+                </div>
+                <!-- Lời chúc 24 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.5s;">
+                    <p class="text-gray-300 mb-4 italic">" Chúc sếp Linh tuổi mới thật bùng nổ, thành công rực rỡ trên mọi mặt trận. Đặc biệt là vẫn tình cảm với ACE như sếp vẫn thế bao lâu nay nhé."</p>
+                    <p class="font-bold text-right text-purple-300">- Nguyễn Thúy Hà -</p>
+                </div>
+                <!-- Lời chúc 25 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.6s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc mừng sinh nhật anh! Chúc anh đủ sức khỏe để chạy deadline, đủ tỉnh táo để không nhắn tin nhầm cho người yêu cũ & mới, và đủ bản lĩnh để gánh vác trọng trách trên vai :))"</p>
+                    <p class="font-bold text-right text-purple-300">- Em Hoa Teksea -</p>
+                </div>
+                <!-- Lời chúc 26 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.7s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc anh Linh sinh nhật vui vẻ nha. Welcome to the big 40 club ^^ Chúc anh tuổi mới thật rực rỡ, luôn trẻ trung, happy và chúc cho mọi dự định của anh sắp tới đều thuận lợi và thành công ạ."</p>
+                    <p class="font-bold text-right text-purple-300">- Trần Khánh Chi -</p>
+                </div>
+                <!-- Lời chúc 27 -->
+                <div class="fade-in wish-card rounded-xl p-6 glow-purple" style="animation-delay: 0.8s;">
+                    <p class="text-gray-300 mb-4 italic">"Chúc sếp Linh ngày càng đẹp trai, phong độ, điểm 10 chất lượng."</p>
+                    <p class="font-bold text-right text-purple-300">- Mai Việt Khoa -</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần 4: Lời chúc từ Ban Lãnh Đạo -->
+        <section class="mb-20">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-300">Lời chúc đặc biệt từ Ban Lãnh Đạo</h2>
+            </div>
+            <div class="space-y-10">
+                <!-- Card Lãnh Đạo 1: Nguyễn Thanh Thúy -->
+                <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://theme.hstatic.net/200000801121/1001313637/14/leader_img2_large.png?v=268" alt="Ms. Nguyễn Thanh Thúy" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Ms. Nguyễn Thanh Thúy</h3>
+                        <p class="text-amber-200">Chuyên gia cố vấn</p>
+                    </div>
+                    <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh:</p>
+                            <blockquote>"Chúc mừng sinh nhật sếp. Chúc sếp luôn mạnh khoẻ, vui vẻ, hạnh phúc. Cảm ơn sếp vì đã luôn là người truyền cảm hứng, là người dẫn dắt và là người anh cả của Zodiac. Mong anh sẽ luôn giữ được ngọn lửa nhiệt huyết để chèo lái con thuyền Zodiac vươn ra biển lớn."</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Lãnh Đạo 2: Nguyễn Xuân Hòa -->
+                <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://zodiac.com.vn/wp-content/uploads/2021/04/Nguyen-Xuan-Hoa-1.png" alt="Mr. Nguyễn Xuân Hòa" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Mr. Nguyễn Xuân Hòa</h3>
+                        <p class="text-amber-200">PCT HĐQT</p>
+                    </div>
+                    <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh & Mr. Linh:</p>
+                            <blockquote>"Nhân dịp Sinh nhật, chúc Chủ tịch và Giám đốc Clarity luôn mạnh khỏe, tích thêm nhiều năng lượng nhiệt huyết dẫn dắt con tàu Zodiac/Clarity vượt thác gềnh ra biển lớn AV !!!"</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Lãnh Đạo 3: Nguyễn Kiều Trang -->
+                 <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://zodiac.com.vn/wp-content/uploads/2023/04/HAN04787-Copy-scaled.jpg" alt="Ms. Nguyễn Kiều Trang" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Ms. Nguyễn Kiều Trang</h3>
+                        <p class="text-amber-200">TGĐ Zodiac</p>
+                    </div>
+                    <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh:</p>
+                            <blockquote>"Kính chúc Chủ tịch vạn điều tốt đẹp!"</blockquote>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Linh:</p>
+                            <blockquote>"Chúc Linh tuổi mới rực rỡ thành công!"</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Lãnh Đạo 4: Nguyễn Tất Đạt (Chưa có lời chúc) -->
+                 <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://theme.hstatic.net/200000801121/1001313637/14/leader_img1_large.png?v=268" alt="Mr. Nguyễn Tất Đạt" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Mr. Nguyễn Tất Đạt</h3>
+                        <p class="text-amber-200">GĐ Teksea</p>
+                    </div>
+                     <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh:</p>
+                            <blockquote>"Nhân ngày sinh nhật, cháu chúc chú thật nhiều niềm vui, sức khoẻ dồi dào và hạnh phúc trọn vẹn! Cá nhân cháu luôn cảm thấy may mắn và tự hào về chặng đường đồng hành cũng như dưới sự lãnh đạo của chú, cùng xây dựng công ty, tổ chức ngày càng phát triển bền vững."</blockquote>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Linh:</p>
+                            <blockquote>"Nhân dịp sinh nhật sắp tới, chúc người bạn của tôi thật nhiều sức khoẻ, may mắn và thành công! Dù hiện tại hay phía trước còn nhiều khó khăn và thách thức nhưng luôn luôn giữ vững ý chí, quyết tâm và thực sự cố gắng trong công việc và cuộc sống, rồi những điều tốt đẹp chắc chắn sẽ tới!"</blockquote>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Lãnh Đạo 5: Phạm Lan -->
+                <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://i.postimg.cc/zDRp8DBs/S-p-Lan-Ph-m.jpg" alt="Ms. Phạm Lan" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Ms. Phạm Lan</h3>
+                        <p class="text-amber-200">GĐ HealthSK</p>
+                    </div>
+                    <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh:</p>
+                            <blockquote>"Chúc anh Khánh sinh nhật vui vẻ, chúc anh tuổi mới, năng lượng mới, thành công mới, thắng lợi mới!"</blockquote>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Linh:</p>
+                            <blockquote>"Chúc Linh đón sinh nhật nhiều niềm vui, hành trình cuộc sống và công việc luôn thuận buồm xuôi gió, vạn sự hanh thông, gặt hái nhiều thành công. Chúc cháu sức khoẻ và hạnh phúc!"</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Lãnh Đạo 6: Đinh Minh Tuấn -->
+                <div class="fade-in leader-final-card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
+                    <div class="text-center flex-shrink-0 w-full md:w-48">
+                        <img src="https://i.postimg.cc/L8Sxydmr/S-p-Tu-n-inh.jpg" alt="Mr. Đinh Minh Tuấn" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-amber-300">
+                        <h3 class="mt-4 text-xl font-bold text-white">Mr. Đinh Minh Tuấn</h3>
+                        <p class="text-amber-200">Giám đốc Good Health</p>
+                    </div>
+                    <div class="w-full text-lg italic text-gray-200 space-y-4">
+                        <div>
+                            <p class="font-semibold text-amber-200">Gửi Mr. Khánh:</p>
+                            <blockquote>"Kính gửi Chú Khánh,<br><br>Ngày 31/08 luôn là một dấu mốc đặc biệt với HealthSK và Goodhealth Việt Nam. Đây không chỉ là thời điểm gần với kỳ nghỉ lễ lớn của cả nước, mà còn là ngày sinh nhật của Chú – người đã dành trọn tâm huyết để mang đến những giá trị tốt đẹp cho tập thể nhân viên và góp phần kiến tạo những giá trị bền vững cho cộng đồng tại Việt Nam.<br>Nhân dịp đặc biệt này, thay mặt Công ty, cháu xin kính chúc Chú thật nhiều sức khỏe, bình an và hạnh phúc. Mong rằng mọi tâm huyết và tầm nhìn mà Chú đã kiên định theo đuổi sẽ luôn gặt hái thành công và lan tỏa những giá trị tốt đẹp.<br><br>Trân trọng,"</blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần 3: Lời kết -->
+        <section class="text-center fade-in" style="animation-delay: 0.5s;">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Khoảnh Khắc Gắn Kết</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
+                Một lần nữa, tập thể Zodiac xin kính chúc hai Sếp một sinh nhật thật ý nghĩa, ấm áp bên gia đình, bạn bè và đồng nghiệp. Chúc các Sếp luôn mạnh khoẻ, hạnh phúc và tiếp tục là những người thuyền trưởng tài ba đưa con thuyền Zodiac vươn ra biển lớn!
+            </p>
+            <div class="rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+                <img src="https://i.postimg.cc/C5ktWLTV/final-team.png" alt="Ảnh chibi 2 sếp và đội ngũ" class="w-full h-auto object-cover">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Script to generate confetti
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981'];
+            const confettiCount = 100;
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = `${Math.random() * 5}s`;
+                confetti.style.animationDuration = `${3 + Math.random() * 4}s`;
+                if (Math.random() > 0.5) {
+                    confetti.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
+                    confetti.style.width = '12px';
+                    confetti.style.height = '12px';
+                }
+                container.appendChild(confetti);
+            }
+
+            // Staggered animations
+            const animatedElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused'; // Pause animation initially
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
